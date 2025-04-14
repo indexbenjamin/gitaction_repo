@@ -13,6 +13,8 @@ media/
 venv/
 .env/
 .envrc
+cit410venv/
+.env
 
 # IDE
 .idea/
