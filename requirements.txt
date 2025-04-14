@@ -1,6 +1,6 @@
 asgiref==3.8.1
 coverage==7.8.0
-Django==3.0.14
+Django==5.0.14
 exceptiongroup==1.2.2
 iniconfig==2.1.0
 packaging==24.2
@@ -8,6 +8,7 @@ pluggy==1.5.0
 pytest==8.3.5
 pytest-cov==6.1.0
 pytest-django==4.11.1
+python-decouple==3.8
 pytz==2025.2
 sqlparse==0.5.3
 tomli==2.2.1
