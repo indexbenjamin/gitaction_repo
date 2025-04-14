@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}CIT 410 COURSE REGISTRATION PAGE{% endblock %}
+{% block content %}
+{% load static %}  <!-- Add this line to load static files -->
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+ <h1>CIT 410 COURSE REGISTRATION PAGE</h1>
+ <h2>Enter your information below:</h2>
+ <form method="post" action="">
+   {% csrf_token %}
+   {{ form }}
+   <button name="save">Submit</button>
+ </form>
+
+ <h2>Completed registrations:</h2>
+ {% for reg in regis %}
+ 
+ <p>
+ Name: {{ reg.firstName }} {{ reg.lastName }}
+ </p>
+ <p>
+ Student ID: {{ reg.studentID }} | Course Code: {{ reg.courseCode }} 
+ | Term: {{ reg.term }} | Date: {{ reg.date }}
+ 
+ </p>
+ <p>
+ **************************************************
+ </p>
+ {% endfor %}
+
+{% endblock %}
