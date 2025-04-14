@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', config('DJANGO_SECRET_KEY'))#with a fallbac
 #DEBUG = True
 DEBUG = False # Debug Updated to False for production
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
