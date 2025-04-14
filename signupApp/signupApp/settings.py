@@ -22,7 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'ActualSecretKeyWasHere'
 from decouple import config
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+#SECRET_KEY = config('DJANGO_SECRET_KEY') #without a fallback
+SECRET_KEY = os.getenv('SECRET_KEY', config('DJANGO_SECRET_KEY'))#with a fallback
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
